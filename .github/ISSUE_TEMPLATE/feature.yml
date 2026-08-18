@@ -1,0 +1,49 @@
+name: Funcionalidad
+description: Proponer trabajo asociado a requisitos aprobados.
+title: "[Feature]: "
+labels: ["feature"]
+body:
+  - type: input
+    id: requirements
+    attributes:
+      label: Requisitos relacionados
+      description: Identificadores RU/RS de la plantilla oficial.
+      placeholder: "RU-001, RS-004"
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto y resultado esperado
+      description: Describir la necesidad, no una solución anticipada.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Criterios de aceptación
+      description: Usar una lista de resultados observables.
+      placeholder: "- [ ] ..."
+    validations:
+      required: true
+  - type: textarea
+    id: exclusions
+    attributes:
+      label: Fuera de alcance
+      description: Indicar qué no debe resolver este issue.
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencias y riesgos
+      description: Otros issues, ADR, integraciones, datos o decisiones pendientes.
+  - type: dropdown
+    id: evidence
+    attributes:
+      label: Evidencia principal
+      options:
+        - Prueba automática
+        - Revisión visual o accesibilidad
+        - Prueba con usuarios
+        - Documentación o revisión de diseño
+    validations:
+      required: true

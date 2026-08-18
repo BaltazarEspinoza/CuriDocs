@@ -1,0 +1,25 @@
+{
+  "name": "@curidocs/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "node --watch src/server.ts",
+    "lint": "eslint src",
+    "start": "node dist/server.js",
+    "test": "node --test src/app.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@curidocs/contracts": "workspace:*",
+    "fastify": "5.11.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "catalog:",
+    "@types/node": "catalog:",
+    "eslint": "catalog:",
+    "typescript": "catalog:",
+    "typescript-eslint": "catalog:"
+  }
+}

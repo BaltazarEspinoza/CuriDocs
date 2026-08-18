@@ -1,0 +1,36 @@
+name: Error
+description: Reportar un comportamiento reproducible que no cumple lo esperado.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Comportamiento observado
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamiento esperado
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Pasos para reproducir
+      placeholder: "1. ...\n2. ...\n3. ..."
+    validations:
+      required: true
+  - type: input
+    id: requirement
+    attributes:
+      label: Requisito o caso de prueba relacionado
+      placeholder: "RS-000 / CP-000"
+  - type: textarea
+    id: environment
+    attributes:
+      label: Entorno y evidencia
+      description: Rama, navegador, sistema, logs sin secretos y capturas si corresponde.
+    validations:
+      required: true

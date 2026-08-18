@@ -1,0 +1,22 @@
+name: curidocs
+
+services:
+  db:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-curidocs}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-curidocs_local}
+      POSTGRES_USER: ${POSTGRES_USER:-curidocs}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - curidocs_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-curidocs} -d ${POSTGRES_DB:-curidocs}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  curidocs_postgres_data:
