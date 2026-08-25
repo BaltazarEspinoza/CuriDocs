@@ -4,7 +4,7 @@
 
 - Estructura de monorepo y límites entre web, API y contratos.
 - Configuración reproducible de TypeScript y pnpm.
-- Página web mínima de verificación.
+- Boceto navegable con tablero, menú y páginas contextuales de «En construcción».
 - Endpoint de salud mínimo en cada aplicación.
 - Prueba automática del endpoint de la API.
 - PostgreSQL local opcional sin tablas ni conexión desde la aplicación.
@@ -23,7 +23,8 @@ Los siguientes elementos pertenecen al proyecto del curso y no forman parte de l
 - autenticación única, Educandus, encuestas, Mercado Pago o Flow;
 - clonación de proyectos;
 - entidades, tablas, migraciones, semillas o repositorios de datos;
-- interfaz definitiva, nombre comercial, identidad visual o logotipo.
+- interfaz definitiva, identidad visual o logotipo oficial (el aspecto actual solo sirve como guía);
+- acciones reales detrás de botones, formularios o indicadores del boceto.
 
 ## Mapa de trabajo futuro
 

@@ -18,7 +18,7 @@ flowchart LR
 
 ### `apps/web`
 
-Responsable de la interfaz y experiencia web. Solo contiene una pantalla de verificación y un endpoint de salud. Las funcionalidades futuras deberían organizarse por área del producto, no por tipo genérico de archivo.
+Responsable de la interfaz y experiencia web. Contiene un boceto navegable, páginas estáticas de «En construcción» y un endpoint de salud. Los datos visibles son demostrativos y no existe lógica del dominio. Las funcionalidades futuras deberían organizarse por área del producto, no por tipo genérico de archivo.
 
 ### `apps/api`
 

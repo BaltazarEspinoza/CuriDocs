@@ -8,7 +8,7 @@ Base técnica para el proyecto de **Diseño de Software 2026**: un futuro sistem
 ## Qué quedó preparado
 
 - Monorepo con pnpm y Turborepo.
-- Aplicación web mínima con Next.js, React y TypeScript.
+- Boceto web navegable con Next.js, React y TypeScript.
 - API mínima con Fastify y un único endpoint `GET /health`.
 - Paquete compartido para contratos entre aplicaciones.
 - PostgreSQL local opcional mediante Docker Compose.
@@ -35,11 +35,12 @@ pnpm dev
 
 Después de iniciar:
 
-- Web de prueba: <http://localhost:3000>
+- Boceto de la web: <http://localhost:3000>
 - Salud de la web: <http://localhost:3000/api/health>
 - Salud de la API: <http://localhost:3001/health>
 
-La página de prueba y la API no requieren una base de datos. Para preparar PostgreSQL:
+El boceto y la API no requieren una base de datos. Los indicadores, tareas y alertas que aparecen en
+pantalla son demostrativos. Para preparar PostgreSQL:
 
 ```powershell
 pnpm db:up
@@ -70,7 +71,7 @@ pnpm db:down
 .
 ├── apps/
 │   ├── api/                 # Servicio HTTP; solo health check por ahora
-│   └── web/                 # Aplicación Next.js y página de verificación
+│   └── web/                 # Aplicación Next.js y boceto navegable
 ├── packages/
 │   └── contracts/           # Tipos compartidos, sin entidades del dominio
 ├── docs/
@@ -78,7 +79,8 @@ pnpm db:down
 │   ├── requirements/        # Convenciones para especificar y trazar requisitos
 │   ├── ARCHITECTURE.md
 │   ├── ROLES.md
-│   └── SCOPE.md
+│   ├── SCOPE.md
+│   └── UI-GUIDE.md
 ├── infra/database/          # Punto de entrada para futuras migraciones
 ├── .github/                 # CI y plantillas de colaboración
 └── compose.yaml             # PostgreSQL local opcional
@@ -87,10 +89,11 @@ pnpm db:down
 ## Antes de implementar
 
 1. Revisar [el alcance y los límites](docs/SCOPE.md).
-2. Asignar [los roles del equipo](docs/ROLES.md) para la unidad actual.
-3. Completar la plantilla oficial de requisitos entregada por el curso.
-4. Registrar decisiones importantes en [un ADR](docs/adr/README.md).
-5. Elegir y documentar autenticación, persistencia, editor, PDF e integraciones antes de agregar dependencias.
+2. Usar [la guía del boceto](docs/UI-GUIDE.md) para discutir la futura navegación.
+3. Asignar [los roles del equipo](docs/ROLES.md) para la unidad actual.
+4. Completar la plantilla oficial de requisitos entregada por el curso.
+5. Registrar decisiones importantes en [un ADR](docs/adr/README.md).
+6. Elegir y documentar autenticación, persistencia, editor, PDF e integraciones antes de agregar dependencias.
 
 Las reglas de trabajo están en [CONTRIBUTING.md](CONTRIBUTING.md) y la vista arquitectónica inicial en [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
